@@ -2,11 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import AxiomValues from "../components/LandingPage/Hero/AxiomValues";
 import Industries from "../components/LandingPage/Hero/Industries";
-// import { Linkedin } from "lucide-react";
 import Linkedin from "@/public/socialmedia/Linkedin.svg";
+import Team from "@/public/about/Team.png"
 import Jobs from "../components/Jobs/Jobs";
 import axios from "axios";
 import { backendUrl } from "../constants/constants";
+import Cover from "@/app/components/ui/Cover";
 
 interface TeamMember {
     teamMemberImage: string;
@@ -65,18 +66,8 @@ export default async function Page() {
     return (
         <>
             {/* Hero Section */}
-            <div className="relative ">
-                <div className="bg-black ">
-                    {/* <img className="max-h-[650px] w-full object-cover" src="https://res.cloudinary.com/ddmanxpsb/image/upload/v1730768650/Rectangle_27_1_gekqzm.png" alt="" /> */}
-                    <Image src="https://res.cloudinary.com/ddmanxpsb/image/upload/v1730768650/Rectangle_27_1_gekqzm.png" alt="About Picture" width={1920} height={650} className="min-h-[450px] md:in-h-[650px] max-h-[650px] w-full object-fill" />
-                    {/* <Image src={contactHero.src} alt="logo" width={120} height={400} layout="responsive" /> */}
-                </div>
-                <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center gap-y-5 items-center text-white px-3">
-                    <h1 className="text-base font-medium text-center uppercase text-[var(--Blue-Color)]">About Us</h1>
-                    <p className="text-center text-3xl md:text-5xl xl:text-6xl xl:leading-[80px] font-medium max-w-[824px]">Your Partner in Technology and Innovation</p>
-                    <p className="text-center text-lg md:text-xl md:leading-[32px] max-w-2xl"> We are more than just a tech solutions provider we are your strategic partner in innovation.</p>
-                </div>
-            </div>
+            <Cover coverImage="/about/cover.png" title="About Us" subtitle="Your Partner in Technology and Innovation" description="We are more than just a tech solutions provider we are your strategic partner in innovation." />
+
 
             {/* Our Story */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-[30px] gap-y-10 container mx-auto px-4 py-[60px] xl:py-24">
@@ -92,7 +83,8 @@ export default async function Page() {
                     </div>
                 </div>
                 <div className="Right w-full flex items-center ">
-                    <Image src="https://res.cloudinary.com/ddmanxpsb/image/upload/v1730787467/About_Us_dzqwdx.png" alt="storyImage" width={600} height={600} className="mx-auto rounded-3xl border-[3px] border-white  "></Image>
+                    {/* <Image src="https://res.cloudinary.com/ddmanxpsb/image/upload/v1730787467/About_Us_dzqwdx.png" alt="storyImage" width={600} height={600} className="mx-auto rounded-3xl border-[3px] border-white  "></Image> */}
+                    <Image src={Team} alt="storyImage" width={600} height={600} className="mx-auto rounded-3xl border-[3px] border-white  "></Image>
                     {/* <img className=" object-cover rounded-3xl border-[3px] border-white" src="https://res.cloudinary.com/ddmanxpsb/image/upload/v1730787467/About_Us_dzqwdx.png" alt="storyImage" /> */}
                 </div>
             </div>

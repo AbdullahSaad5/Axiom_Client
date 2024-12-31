@@ -1,18 +1,8 @@
-// import Image from "next/image";
-import Link from "next/link";
-import { ChevronRight  } from "lucide-react";
+
 import axios from "axios";
-// import digital from "@/public/services/digital.svg";
-// import DevOps from "@/public/services/DevOps.svg";
-// import mobile from "@/public/services/mobile.svg";
-// import game from "@/public/services/game.svg";
-// import cms from "@/public/services/cms.svg";
-// import ssl from "@/public/services/ssl.svg";
-// import Cloud from "@/public/services/cloud.svg";
-// import avator from "@/public/services/avator.svg";
-// import Bussiness from "@/public/services/Business.svg";
 import { backendUrl } from "../../constants/constants";
 import { getLink } from "@/app/services/getLink";
+import LearnMore from "../ui/Learn More/LearnMore";
 
 
 interface Service {
@@ -26,7 +16,7 @@ interface Service {
 export default async function Services() {
     let services: Service[] | null = null;
     try {
-        const response = await axios.get(`${backendUrl}/api/v1/service`,{
+        const response = await axios.get(`${backendUrl}/api/v1/service`, {
             headers: {
                 "Cache-Control": "public, max-age=60", // This sets a 5-minute cache time
             },
@@ -130,12 +120,12 @@ export default async function Services() {
                         {services.map((service, index) => (
                             <div
                                 key={index}
-                                className={`relative overflow-hidden p-8 text-white rounded-[20px] shadow-lg min-h-[424px] box-gradient 
+                                className={`relative overflow-hidden p-8 text-white rounded-[20px] shadow-lg min-h-[424px] box-gradient  group
                                 ${[2, 5, 8].includes(index) ? "md:col-span-2" : ""} 
                                 ${[2, 3, 8].includes(index) ? "lg:col-span-2" : ""} 
                                 ${index === 5 ? "lg:col-span-1" : ""}`}>
                                 <h4 className="text-2xl font-bold">{service.title}</h4>
-                                <p className="text-[var(--Gray-Color)] text-base mt-7">{service.shortDescription}</p>
+                                <p className="text-[var(--Gray-Color)] text-base mt-7 ">{service.shortDescription}</p>
 
                                 {/* Image container with fixed height */}
                                 {/* <div className="absolute bottom-6 right-6 max-w-[calc(100%-3rem)] h-[180px] w-[275px]">
@@ -143,17 +133,19 @@ export default async function Services() {
                                 </div> */}
                                 {/* absolute bottom-6 right-6  */}
 
-                                <div className="absolute bottom-6 right-6">
-                                    <img src={service.coverImage} alt={service.title} className="w-auto h-auto" />
+                                <div className="absolute bottom-6 right-6 pl-6">
+                                    {/* <img src={service.coverImage} alt={service.title} className="w-auto h-auto group-hover:scale-110 duration-300 " /> */}
+                                    <img src={service.coverImage} alt={service.title} className="w-auto h-auto group-hover:scale-150 group-hover:translate-x-16 group-hover:translate-y-10 duration-300 " />
                                     {/* <Image src={service.coverImage} alt={service.title} className="absolute object-contain bottom-6 right-6 pl-12 sm:pl-0" /> */}
                                     {/* <Image src={service.coverImage} alt={service.title} className=" "   /> */}
-                                   {/* <Image src={service.coverImage} alt={service.title} width={600} height={600} objectFit="contain" /> */}
+                                    {/* <Image src={service.coverImage} alt={service.title} width={600} height={600} objectFit="contain" /> */}
                                 </div>
 
                                 {[2, 3, 8].includes(index) && (
-                                    <Link href={getLink(service.title)} className="absolute bottom-6 flex items-center">
-                                        Learn more <ChevronRight size={16} className="text-[var(--Blue-Color)]" />
-                                    </Link>
+                                    // <Link href={getLink(service.title)} className="absolute bottom-6 flex items-center">
+                                    //     Learn more <ChevronRight size={16} className="text-[var(--Blue-Color)]" />
+                                    // </Link>
+                                    <LearnMore href={getLink(service.title)} value="Learn more" className="absolute bottom-6" borderClassName="bg-[var(--Blue-Color)]" />
                                 )}
                             </div>
                         ))}

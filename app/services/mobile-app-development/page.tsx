@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import {  ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import MobileProcessSection from "./MobileProcessSection";
 import FAQs from "./FAQs";
-
+import mobile from "@/public/services/usedinSubServices.png"
+import Cover from "@/app/components/ui/Cover";
 export default function Page() {
     const services = [
         {
@@ -154,23 +155,20 @@ export default function Page() {
     return (
         <>
             {/* Hero Section */}
-            <div className="relative ">
-                <div className="bg-black ">
-                    {/* <img className="max-h-[650px] w-full object-cover" src="https://res.cloudinary.com/ddmanxpsb/image/upload/v1730768650/Rectangle_27_1_gekqzm.png" alt="" /> */}
-                    <Image src="https://res.cloudinary.com/ddmanxpsb/image/upload/v1730768650/Rectangle_27_1_gekqzm.png" alt="About Picture" width={1920} height={650} className="min-h-[450px] md:h-[550px] md:in-h-[650px] max-h-[650px] w-full object-fill" />
-                    {/* <Image src={contactHero.src} alt="logo" width={120} height={400} layout="responsive" /> */}
-                </div>
-                <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center text-white px-3">
-                    <h1 className="text-base font-medium text-center uppercase text-[var(--Blue-Color)]">Mobile App DEVELOPMENT</h1>
-                    <p className="text-center text-3xl md:text-6xl md:leading-[80px] font-semibold max-w-[884px] mt-[10px] mb-[20px]">Custom-Built Mobile Application for Modern Businesses</p>
-                    <p className="text-center text-lg md:text-xl md:leading-[32px] max-w-2xl">We offer a comprehensive suite of web development services designed to meet your unique needs.</p>
-                </div>
-            </div>
+            <Cover
+
+                coverImage="/about/cover.png"
+                title="Mobile App Development"
+                subtitle="Custom-Built Mobile Application for Modern Businesses"
+                description="We offer a comprehensive suite of web development services designed to meet your unique needs."
+            />
+
+
 
             <section className="custom-container mx-auto mb-20">
                 {/* Building Future + content  */}
                 <div className="grid md:grid-cols-2 py-20 gap-y-5 ">
-                <div className="left mb-5">
+                    <div className="left mb-5">
                         <h3 className=" mb-[50px] text-black text-3xl md:text-5xl !leading-tight  font-semibold lg:max-w-lg">
                             Building The Future Of <span className="text-4xl md:text-6xl font-bold">Mobile App Together</span>
                         </h3>
@@ -184,7 +182,7 @@ export default function Page() {
                     </div>
                 </div>
                 {/* Big Image */}
-                <Image src="https://res.cloudinary.com/ddmanxpsb/image/upload/v1728063191/services_rlyd4a.jpg" alt="Web Development Service Image" width={2400} height={1200} className=" max-h-[640px] object-cover rounded-3xl"></Image>
+                <Image src={mobile} alt="Web Development Service Image" width={2400} height={1200} className=" max-h-[640px] object-cover rounded-3xl"></Image>
             </section>
 
             <section className="bg-[#EDF3FF] py-16 px-4">

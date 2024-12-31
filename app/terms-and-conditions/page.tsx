@@ -12,7 +12,7 @@ const page = async () => {
 
     let post: Post[] | null = null;
     try {
-        const response = await axios.get(`${backendUrl}/api/v1/web/terms-and-conditions`, {
+        const response = await axios.get(`${backendUrl}/api/v1/terms-and-conditions`, {
             headers: {
                 "Cache-Control": "public, max-age=60", // This sets a 5-minute cache time
             },

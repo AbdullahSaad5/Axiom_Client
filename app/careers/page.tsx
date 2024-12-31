@@ -7,6 +7,8 @@ import Remote from "@/public/careers/Remote Work.svg";
 import Training from "@/public/careers/Trainings & Certifications.svg";
 import Health from "@/public/careers/Health.svg";
 import Loyalty from "@/public/careers/Loyalty Rewards.svg";
+import careers from "@/public/careers/careers.png";
+import Cover from "@/app/components/ui/Cover";
 export default function Page() {
     const benefits = [
         {
@@ -43,18 +45,12 @@ export default function Page() {
     return (
         <>
             {/* Hero Section */}
-            <div className="relative ">
-                <div className="bg-black ">
-                    {/* <img className="max-h-[650px] w-full object-cover" src="https://res.cloudinary.com/ddmanxpsb/image/upload/v1730768650/Rectangle_27_1_gekqzm.png" alt="" /> */}
-                    <Image src="https://res.cloudinary.com/ddmanxpsb/image/upload/v1730768650/Rectangle_27_1_gekqzm.png" alt="About Picture" width={1920} height={650} className="min-h-[550px] md:in-h-[650px] max-h-[650px] w-full object-fill" />
-                    {/* <Image src={contactHero.src} alt="logo" width={120} height={400} layout="responsive" /> */}
-                </div>
-                <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center text-white px-3">
-                    <h1 className="text-base font-medium text-center uppercase text-[var(--Blue-Color)]">Careers</h1>
-                    <p className="text-center text-3xl md:text-5xl xl:text-6xl xl:leading-[80px] font-semibold max-w-[884px] mt-[10px] mb-[20px]">Advance Your Career and grow Alongside the Best Talent </p>
-                    <p className="text-center text-lg md:text-xl md:leading-[32px] max-w-2xl"> We&apos;re committed to helping you expand your skills, achieve your goals, and unlock your full potential.</p>
-                </div>
-            </div>
+            <Cover
+                coverImage="/about/cover.png"
+                title="Careers" 
+                subtitle="Advance Your Career and grow Alongside the Best Talent"
+                description="We&apos;re committed to helping you expand your skills, achieve your goals, and unlock your full potential."
+            />
 
             {/* Starting Content */}
             <div className=" text-center mt-[60px] xl:mt-[100px]">
@@ -67,7 +63,8 @@ export default function Page() {
 
             {/* Pictures */}
             <div className="mt-[60px] lg:mt-[120px] ">
-                <Image src="https://res.cloudinary.com/ddmanxpsb/image/upload/v1730967494/Frame_34714_1_vopxqv.png" alt="" width={2400} height={1200} className="mx-auto" ></Image>
+                {/* <Image src="https://res.cloudinary.com/ddmanxpsb/image/upload/v1730967494/Frame_34714_1_vopxqv.png" alt="" width={2400} height={1200} className="mx-auto" ></Image> */}
+                <Image src={careers} alt="" width={2400} height={1200} className="mx-auto" ></Image>
             </div>
             {/* Offering */}
             <section className="py-16 px-4">
@@ -77,7 +74,7 @@ export default function Page() {
                         {benefits.map((benefit, index) => (
                             <div key={index} className="p-6 bg-white rounded-[20px] border border-[#E7EAF2] hover:shadow-2xl duration-200 transition-shadow">
                                 <div className="flex gap-4">
-                                    
+
                                     <div className="flex-shrink-0"><Image src={benefit.icon} alt={benefit.title} className=""></Image></div>
                                     <div>
                                         <h3 className="text-2xl text-[#1C2539] font-semibold mb-5">{benefit.title}</h3>

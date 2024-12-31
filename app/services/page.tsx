@@ -7,86 +7,15 @@ import RightArrow from "@/public/RightArrow.svg";
 import WhyWorkWithUs from "../components/Services/WhyWorkWithUs";
 import { getLink } from "./getLink";
 import Loading from "../loading";
+import picture from "@/public/services/services.png"
+import cover from "@/public/about/cover.png"
+
 const stats = [
     { value: "70K+", label: "Years of Experience" },
     { value: "140K+", label: "Satisfied Clients" },
     { value: "98.9%", label: "Satisfaction Rate" },
     { value: "900M+", label: "Candidate Database" },
 ];
-// const services = [
-//     {
-//         title: "Digital Solutions",
-//         id: "web",
-//         link: "/services/web-development",
-//         description: "Our Digital Solutions are designed to empower your business in the digital age. From scalable platforms to seamless applications, we create solutions that drive engagement, streamline operations, and enhance user experience. Our team combines deep technical expertise with innovative thinking to deliver digital products that align with your vision and adapt to the fast-evolving market. ",
-//         image: "https://res.cloudinary.com/ddmanxpsb/image/upload/v1730790532/_%C3%83_%C3%83_%C3%83_%C3%83__1_zikitt.png",
-//         // icon: <Code className="h-10 w-10 text-primary" />,
-//     },
-//     {
-//         title: "DevOps Solutions",
-//         id: "web",
-//         link: "/services/web-development",
-//         description: "Our solutions bridge the gap between development and operations, enabling faster, more reliable software delivery. By integrating automation, continuous integration, and continuous delivery (CI/CD) pipelines, we streamline your workflows, reduce deployment times, and enhance overall system stability. Our DevOps approach emphasizes collaboration, efficiency, and rapid feedback loops.",
-//         image: "https://res.cloudinary.com/ddmanxpsb/image/upload/v1730790069/Group_7_h0plyx.png",
-//         // icon: <Code className="h-10 w-10 text-primary" />,
-//     },
-//     {
-//         title: "Mobile App Development",
-//         id: "web",
-//         link: "/services/web-development",
-//         description: "Crafting engaging and user-friendly mobile applications seamlessly across platforms.",
-//         image: "mobile",
-//         // icon: <Code className="h-10 w-10 text-primary" />,
-//     },
-//     {
-//         title: "Game Development (AR & VR)",
-//         id: "web",
-//         link: "/services/web-development",
-//         description: "Immersive and captivating game development leveraging augmented reality and virtual reality technologies.",
-//         image: "game",
-//         // icon: <Code className="h-10 w-10 text-primary" />,
-//     },
-//     {
-//         title: "Web Development",
-//         id: "web",
-//         link: "/services/web-development",
-//         description: "Custom Web Development: Building responsive, intuitive websites tailored to your unique.",
-//         image: "cms",
-//         // icon: <Code className="h-10 w-10 text-primary" />,
-//     },
-//     {
-//         title: "Cybersecurity Service",
-//         id: "web",
-//         link: "/services/web-development",
-//         description: "Custom Web Development: Building responsive, intuitive websites tailored to your unique.",
-//         image: "ssl",
-//         // icon: <Code className="h-10 w-10 text-primary" />,
-//     },
-//     {
-//         title: "Cloud Services",
-//         id: "web",
-//         link: "/services/web-development",
-//         description: "Cloud Operations and Migration: Smooth transition and efficient management of cloud.",
-//         image: "Cloud",
-//         // icon: <Code className="h-10 w-10 text-primary" />,
-//     },
-//     {
-//         title: "Staff Augmentation",
-//         id: "web",
-//         link: "/services/web-development",
-//         description: "Staff Augmentation: Augmenting your workforce with skilled professionals to meet evolving.",
-//         image: "avator",
-//         // icon: <Code className="h-10 w-10 text-primary" />,
-//     },
-//     {
-//         title: "Custom Enterprise Solutions",
-//         id: "web",
-//         link: "/services/web-development",
-//         description: "Developing scalable and robust applications tailored to your business needs.",
-//         image: "Bussiness",
-//         // icon: <Code className="h-10 w-10 text-primary" />,
-//     },
-// ];
 
 interface Service {
     title: string;
@@ -123,7 +52,7 @@ export default async function Page() {
             {/* Hero Section */}
             <div className="relative ">
                 <div className="bg-black">
-                    <Image src="https://res.cloudinary.com/ddmanxpsb/image/upload/v1730768650/Rectangle_27_1_gekqzm.png" alt="About Picture" width={1920} height={650} className="min-h-[650px] md:in-h-[650px] max-h-[752px] w-full object-fill" />
+                    <Image src={cover} alt="About Picture" width={1920} height={650} className="min-h-[650px] md:in-h-[650px] max-h-[752px] w-full object-fill" />
                 </div>
                 <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center gap-y-3 md:gap-y-5 items-center text-white px-3">
                     <h1 className="text-base font-medium text-center uppercase text-[var(--Blue-Color)]">SERVICES</h1>
@@ -175,7 +104,7 @@ export default async function Page() {
                         </div>
 
                         <div className="relative h-[400px] rounded-2xl overflow-hidden">
-                            <Image src="https://res.cloudinary.com/ddmanxpsb/image/upload/v1730743234/c5e89b809cf6f6f90a351564e1c60489_jk4cj7.jpg" alt="Hands typing on keyboard" fill className="object-cover" />
+                            <Image src={picture} alt="Hands typing on keyboard" fill className="object-cover" />
                         </div>
                     </div>
                 </div>

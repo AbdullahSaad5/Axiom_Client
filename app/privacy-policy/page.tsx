@@ -12,7 +12,7 @@ const page = async () => {
 
     let post: Post[] | null = null;
     try {
-        const response = await axios.get(`${backendUrl}/api/v1/web/privacy-policy`, {
+        const response = await axios.get(`${backendUrl}/api/v1/privacy-policy`, {
             headers: {
                 "Cache-Control": "public, max-age=60", // This sets a 5-minute cache time
             },
@@ -20,17 +20,17 @@ const page = async () => {
         if (response.data.data) {
             post = response.data.data;
         } else {
-            console.error("Failed to fetch Services data:", response.statusText);
+            console.error("Failed to fetch policy data:", response.statusText);
         }
     } catch (error) {
-        console.log("Error fetching Services Data:", error);
-    }
-    if (!post) {
-        return <Loading/>;
+        console.error("Error fetching policy data:", error);
     }
 
-    // Format the updated date
-    const formattedDate = new Date(post[0].updatedAt).toLocaleDateString("en-US", {
+    if (!post || post.length === 0) {
+        return <Loading />;
+    }
+
+    const formattedDate = new Date(post[0]?.updatedAt).toLocaleDateString("en-US", {
         year: "numeric",
         month: "short",
         day: "numeric",
@@ -38,11 +38,14 @@ const page = async () => {
 
     return (
         <div className="mt-[120px] mb-10 xl:mt-[168px] max-w-[950px] mx-auto px-4">
-            <h1 className="text-4xl xl:text-6xl font-semibold text-[#000915]">{post[0].policyTitle}</h1>
+            <h1 className="text-4xl xl:text-6xl font-semibold text-[#000915]">{post[0]?.policyTitle}</h1>
             <p className="font-bold xl:text-lg mt-3">
-                Last Updated: <span className="">{formattedDate}</span>
+                Last Updated: <span>{formattedDate}</span>
             </p>
-            <div className="text-gray-500 mt-5 post-content" dangerouslySetInnerHTML={{ __html: post[0].policyData }}></div>
+            <div
+                className="text-gray-500 mt-5 post-content"
+                dangerouslySetInnerHTML={{ __html: post[0]?.policyData }}
+            ></div>
         </div>
     );
 };

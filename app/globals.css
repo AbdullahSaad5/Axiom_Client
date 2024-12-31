@@ -3,226 +3,231 @@
 @tailwind utilities;
 
 :root {
-  --Blue-Color: #1C85FF;
-  --Gray-Color: #D1D1D1;
-
+    --Blue-Color: #1c85ff;
+    --Gray-Color: #d1d1d1;
+    --Dark-Gray-Color: #1E1E1E;
 }
 
-
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-family: var(--font-red-hat-display), Arial, Helvetica, sans-serif;
-  ;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-red-hat-display), Arial, Helvetica, sans-serif;
 }
 
 @keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
+    0% {
+        transform: translateX(0);
+    }
 
-  100% {
-    transform: translateX(calc(-1 * var(--scroll-width) / 2));
-  }
+    100% {
+        transform: translateX(calc(-1 * var(--scroll-width) / 2));
+    }
 }
 
 .animate-scroll {
-  animation: scroll var(--animation-duration) linear infinite;
+    animation: scroll var(--animation-duration) linear infinite;
 }
 
 .custom-container {
-  @apply container mx-auto px-4
+    @apply container mx-auto px-4;
 }
 
 .container {
-  width: 100%;
+    width: 100%;
 }
 
 @media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
+    .container {
+        max-width: 640px;
+    }
 }
 
 @media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
+    .container {
+        max-width: 768px;
+    }
 }
 
 @media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
+    .container {
+        max-width: 1024px;
+    }
 }
 
 @media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
+    .container {
+        max-width: 1280px;
+    }
 }
 
 @media (min-width: 1440px) {
-  .container {
-    max-width: 1440px;
-  }
+    .container {
+        max-width: 1440px;
+    }
 }
 
-
 .bg-gradient {
-  background: conic-gradient(from 230.85deg at 83.43% 95.28%, #000814 0deg, #06387A 180deg, #16253A 360deg);
+    background: conic-gradient(from 230.85deg at 83.43% 95.28%, #000814 0deg, #06387a 180deg, #16253a 360deg);
 }
 
 .gray-gradient {
-  background: linear-gradient(180deg, #E5EBF8 0%, #FFFFFF 100%);
+    background: linear-gradient(180deg, #e5ebf8 0%, #ffffff 100%);
 }
 
 .box-gradient {
-  background: conic-gradient(from 230.85deg at 83.43% 95.28%, #000814 0deg, #06387A 180deg, #16253A 360deg);
+    background: conic-gradient(from 230.85deg at 83.43% 95.28%, #000814 0deg, #06387a 180deg, #16253a 360deg);
 }
 
 .service-gradient {
-  background: radial-gradient(at 50% 50%, #041424, transparent 80%), linear-gradient(45deg, #040c1c, #040c24, #04142c);
+    background: radial-gradient(at 50% 50%, #041424, transparent 80%), linear-gradient(45deg, #040c1c, #040c24, #04142c);
 }
 
 .service-scrollbar-gradient {
-  background: linear-gradient(270deg, #000814 -4.56%, #06387A 49.24%, #16253A 103.05%);
+    background: linear-gradient(270deg, #000814 -4.56%, #06387a 49.24%, #16253a 103.05%);
 }
 
 .gradient-border-bottom {
-  border-bottom: 1px solid transparent;
-  border-image-source: linear-gradient(90deg, #E5EBF8 0%, #BCC5D9 44.5%, #E5EBF8 100%);
-  border-image-slice: 1;
+    border-bottom: 1px solid transparent;
+    border-image-source: linear-gradient(90deg, #e5ebf8 0%, #bcc5d9 44.5%, #e5ebf8 100%);
+    border-image-slice: 1;
 }
 
-
 .gradient-border-right {
-  border-right: 1px solid transparent;
-  border-image-source: linear-gradient(90deg, #E5EBF8 0%, #BCC5D9 44.5%, #E5EBF8 100%);
-  border-image-slice: 1;
+    border-right: 1px solid transparent;
+    border-image-source: linear-gradient(90deg, #e5ebf8 0%, #bcc5d9 44.5%, #e5ebf8 100%);
+    border-image-slice: 1;
 }
 
 /* styles.css */
 .gradient-border {
-  border: 1px solid transparent;
-  border-image-source: linear-gradient(90deg, #E5EBF8 0%, #BCC5D9 49%, #E5EBF8 100%);
-  border-image-slice: 1;
+    border: 1px solid transparent;
+    border-image-source: linear-gradient(90deg, #e5ebf8 0%, #bcc5d9 49%, #e5ebf8 100%);
+    border-image-slice: 1;
 }
 
 .bg-process {
-  background: conic-gradient(from 235.46deg at 80% 106.37%, #000814 0deg, #06387A 180deg, #16253A 360deg);
+    background: conic-gradient(from 235.46deg at 80% 106.37%, #000814 0deg, #06387a 180deg, #16253a 360deg);
 }
 
 .bg-CTA {
-  background: linear-gradient(180deg, #E5EBF8 0%, #FFFFFF 100%);
+    background: linear-gradient(180deg, #e5ebf8 0%, #ffffff 100%);
 }
 
-
 .bg-blur {
-  z-index: 0;
-  left: -4%;
-  top: 0%;
-  border-radius: 50%;
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  -webkit-filter: blur(100px);
-  filter: blur(100px);
-  opacity: 20%;
+    z-index: 0;
+    left: -4%;
+    top: 0%;
+    border-radius: 50%;
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    -webkit-filter: blur(100px);
+    filter: blur(100px);
+    opacity: 20%;
 }
 
 .one1 {
-  border: 1px solid;
-  border-image-source: linear-gradient(180deg, #1C85FF 0%, rgba(5, 15, 25, 0) 65.38%);
-  box-shadow: 0px 0px 4.8px 0px #1C85FF;
+    border: 1px solid;
+    border-image-source: linear-gradient(180deg, #1c85ff 0%, rgba(5, 15, 25, 0) 65.38%);
+    box-shadow: 0px 0px 4.8px 0px #1c85ff;
 }
 
 .one2 {
-  border: 1px solid;
-  border-image-source: linear-gradient(270deg, #1C85FF 0%, rgba(5, 15, 25, 0) 50%);
-  box-shadow: 0px 0px 4.8px 0px #1C85FF;
+    border: 1px solid;
+    border-image-source: linear-gradient(270deg, #1c85ff 0%, rgba(5, 15, 25, 0) 50%);
+    box-shadow: 0px 0px 4.8px 0px #1c85ff;
 }
 
 .one3 {
-  border: 1px solid;
-  border-image-source: linear-gradient(90deg, #1C85FF 0%, rgba(5, 15, 25, 0) 50%);
-  box-shadow: 0px 0px 4.8px 0px #1C85FF;
+    border: 1px solid;
+    border-image-source: linear-gradient(90deg, #1c85ff 0%, rgba(5, 15, 25, 0) 50%);
+    box-shadow: 0px 0px 4.8px 0px #1c85ff;
 }
 
 .one4 {
-  border: 1px solid;
-  border-image-source: linear-gradient(360deg, #1C85FF 0%, rgba(5, 15, 25, 0) 34.62%);
-  box-shadow: 0px 0px 4.8px 0px #1C85FF;
+    border: 1px solid;
+    border-image-source: linear-gradient(360deg, #1c85ff 0%, rgba(5, 15, 25, 0) 34.62%);
+    box-shadow: 0px 0px 4.8px 0px #1c85ff;
 }
 
-
 @keyframes borderGradientAnimation {
-  0% {
-    border-image-source: linear-gradient(180deg, #1C85FF 0%, rgba(5, 15, 25, 0) 65.38%);
-  }
+    0% {
+        border-image-source: linear-gradient(180deg, #1c85ff 0%, rgba(5, 15, 25, 0) 65.38%);
+    }
 
-  25% {
-    border-image-source: linear-gradient(270deg, #1C85FF 0%, rgba(5, 15, 25, 0) 50%);
-  }
+    25% {
+        border-image-source: linear-gradient(270deg, #1c85ff 0%, rgba(5, 15, 25, 0) 50%);
+    }
 
-  50% {
-    border-image-source: linear-gradient(90deg, #1C85FF 0%, rgba(5, 15, 25, 0) 50%);
-  }
+    50% {
+        border-image-source: linear-gradient(90deg, #1c85ff 0%, rgba(5, 15, 25, 0) 50%);
+    }
 
-  75% {
-    border-image-source: linear-gradient(360deg, #1C85FF 0%, rgba(5, 15, 25, 0) 34.62%);
-  }
+    75% {
+        border-image-source: linear-gradient(360deg, #1c85ff 0%, rgba(5, 15, 25, 0) 34.62%);
+    }
 
-  100% {
-    border-image-source: linear-gradient(180deg, #1C85FF 0%, rgba(5, 15, 25, 0) 65.38%);
-  }
+    100% {
+        border-image-source: linear-gradient(180deg, #1c85ff 0%, rgba(5, 15, 25, 0) 65.38%);
+    }
 }
 
 .animated-border {
-  border: 1px solid;
-  /* border-radius: 20px; */
-  box-shadow: 0px 0px 4.8px 0px #1C85FF;
-  animation: borderGradientAnimation 5s infinite;
-  border-image-slice: 1;
+    border: 1px solid;
+    /* border-radius: 20px; */
+    box-shadow: 0px 0px 4.8px 0px #1c85ff;
+    animation: borderGradientAnimation 5s infinite;
+    border-image-slice: 1;
 }
 
 @layer base {
-  :root {
-    --radius: 0.5rem;
-
-  }
-
+    :root {
+        --radius: 0.5rem;
+    }
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 .faq-shadow {
-  box-shadow: 0px 0px 0px 7px #E3F0FF;
+    box-shadow: 0px 0px 0px 7px #e3f0ff;
 }
 
-.stats-grandient-line{
-  /* border: 1px solid; border-image-source: linear-gradient(90deg, #1C85FF 0%, #BCC5D9 44.5%, #1C85FF 100%); */
-  /* background: linear-gradient(90deg, #1C85FF 0%, #BCC5D9 44.5%, #1C85FF 100%); */
-  background: linear-gradient(90deg, #E5EBF8 0%, #BCC5D9 44.5%, #E5EBF8 100%);
-  
+.stats-grandient-line {
+    /* border: 1px solid; border-image-source: linear-gradient(90deg, #1C85FF 0%, #BCC5D9 44.5%, #1C85FF 100%); */
+    /* background: linear-gradient(90deg, #1C85FF 0%, #BCC5D9 44.5%, #1C85FF 100%); */
+    background: linear-gradient(90deg, #e5ebf8 0%, #bcc5d9 44.5%, #e5ebf8 100%);
 }
-.post-content h2{
-  @apply text-3xl xl:text-[36px] font-semibold text-[#1E1E1E];
+.post-content p {
+    @apply text-lg text-[var(--Dark-Gray-Color)] mb-4;
 }
-.post-content h3{
-  @apply text-2xl xl:text-3xl font-semibold text-[#1E1E1E];
+.post-content h1 {
+    @apply text-4xl xl:text-5xl font-semibold text-[var(--Dark-Gray-Color)] mb-2;
 }
-
-.post-content p{
-  @apply text-lg text-[#1E1E1E];
+.post-content h2 {
+    @apply text-3xl xl:text-[36px] font-semibold text-[var(--Dark-Gray-Color)] mb-2;
 }
-
-.post-content ul{
-  @apply text-lg list-disc ml-10 space-x-[6px]  text-[#1E1E1E];
+.post-content h3 {
+    @apply text-2xl xl:text-3xl font-semibold text-[var(--Dark-Gray-Color)] mb-2;
 }
 
-
-.screen-minus-80{
-  height: calc(100svh - 80px);
+.post-content h4 {
+    @apply text-xl xl:text-3xl font-semibold text-[var(--Dark-Gray-Color)] mb-2;
 }
 
+.post-content h5 {
+    @apply text-lg xl:text-2xl font-semibold text-[var(--Dark-Gray-Color)] mb-2;
+}
+
+.post-content h6 {
+    @apply text-lg xl:text-xl font-semibold text-[var(--Dark-Gray-Color)] mb-2;
+}
+
+
+
+.post-content ul {
+    @apply text-lg list-disc ml-10 space-y-[6px]  text-[var(--Dark-Gray-Color)] mb-4;
+}
+
+.screen-minus-80 {
+    height: calc(100svh - 80px);
+}
